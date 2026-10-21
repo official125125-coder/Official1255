@@ -4,21 +4,19 @@ QKW996 LINKS
 =========================================
 */
 
-
-// WHATSAPP
+// WhatsApp
 const whatsappLink =
     "https://wa.link/2j7twc";
 
 
-// TELEGRAM SUPPORT
+// Telegram Support
 const telegramSupportLink =
-    "http://t.me/Qkw_996";
+    "https://t.me/Qkw_996";
 
 
-// TELEGRAM CHANNEL
+// Telegram Channel
 const telegramChannelLink =
     "https://t.me/QKWIN996";
-
 
 
 /*
@@ -81,7 +79,6 @@ const year =
     );
 
 
-
 /*
 =========================================
 YEAR
@@ -90,7 +87,6 @@ YEAR
 
 year.textContent =
     new Date().getFullYear();
-
 
 
 /*
@@ -111,10 +107,9 @@ whatsappButton.addEventListener(
 );
 
 
-
 /*
 =========================================
-GROUP CHANNEL - TELEGRAM CHANNEL
+GROUP CHANNEL - TELEGRAM
 =========================================
 */
 
@@ -128,7 +123,6 @@ telegramChannelButton.addEventListener(
 
     }
 );
-
 
 
 /*
@@ -164,16 +158,13 @@ gameCards.forEach(
 );
 
 
-
 /*
 =========================================
 OPEN GAME POPUP
 =========================================
 */
 
-function openGameContact(
-    gameName
-) {
+function openGameContact(gameName) {
 
     modal.dataset.game =
         gameName;
@@ -201,7 +192,6 @@ function openGameContact(
 }
 
 
-
 /*
 =========================================
 GAME WHATSAPP
@@ -218,7 +208,6 @@ modalWhatsapp.addEventListener(
 
     }
 );
-
 
 
 /*
@@ -239,16 +228,13 @@ modalTelegram.addEventListener(
 );
 
 
-
 /*
 =========================================
 OPEN LINK
 =========================================
 */
 
-function openLink(
-    url
-) {
+function openLink(url) {
 
     window.open(
         url,
@@ -257,7 +243,6 @@ function openLink(
     );
 
 }
-
 
 
 /*
@@ -282,7 +267,6 @@ function closeContactModal() {
 }
 
 
-
 /*
 =========================================
 CLOSE BUTTON
@@ -299,7 +283,6 @@ closeModal.addEventListener(
 );
 
 
-
 /*
 =========================================
 CLICK OUTSIDE POPUP
@@ -310,9 +293,7 @@ modal.addEventListener(
     "click",
     function (event) {
 
-        if (
-            event.target === modal
-        ) {
+        if (event.target === modal) {
 
             closeContactModal();
 
@@ -320,7 +301,6 @@ modal.addEventListener(
 
     }
 );
-
 
 
 /*
@@ -335,9 +315,7 @@ document.addEventListener(
 
         if (
             event.key === "Escape" &&
-            modal.classList.contains(
-                "active"
-            )
+            modal.classList.contains("active")
         ) {
 
             closeContactModal();
