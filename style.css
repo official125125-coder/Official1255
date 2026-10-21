@@ -42,7 +42,7 @@ body {
 }
 
 
-/* CONTAINER */
+/* ================= CONTAINER ================= */
 
 .container {
     width: 100%;
@@ -54,7 +54,7 @@ body {
 }
 
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 .header {
     display: flex;
@@ -98,7 +98,8 @@ body {
 
     border-radius: 50%;
 
-    border: 1px solid var(--gold);
+    border:
+        1px solid var(--gold);
 
     background: #000;
 
@@ -136,7 +137,7 @@ body {
 }
 
 
-/* ONLINE */
+/* ================= ONLINE ================= */
 
 .online {
     display: flex;
@@ -183,7 +184,283 @@ body {
 }
 
 
-/* SECTION */
+/* ================= PROMOTION ================= */
+
+.promo-section {
+    margin-top: 22px;
+}
+
+
+.promo-banner {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 22px;
+
+    border:
+        1px solid rgba(212, 175, 55, 0.5);
+
+    border-radius: 18px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(212, 175, 55, 0.16),
+            transparent 40%
+        ),
+        linear-gradient(
+            145deg,
+            #17140b,
+            #0b0b0b 55%,
+            #050505
+        );
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.5),
+        inset 0 0 30px rgba(212, 175, 55, 0.03);
+}
+
+
+.promo-banner::before {
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    top: -100px;
+    right: -60px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 217, 102, 0.08);
+
+    filter: blur(5px);
+
+    pointer-events: none;
+}
+
+
+.promo-top {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    z-index: 1;
+}
+
+
+.promo-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border:
+        1px solid var(--gold);
+
+    border-radius: 14px;
+
+    background:
+        rgba(212, 175, 55, 0.08);
+
+    font-size: 24px;
+}
+
+
+.promo-title {
+    flex: 1;
+}
+
+
+.promo-title span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--gray);
+
+    font-size: 9px;
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+}
+
+
+.promo-title h2 {
+    color: var(--gold-light);
+
+    font-size: 20px;
+
+    letter-spacing: 0.8px;
+}
+
+
+.promo-badge {
+    padding: 6px 10px;
+
+    border:
+        1px solid rgba(255, 217, 102, 0.5);
+
+    border-radius: 20px;
+
+    background:
+        rgba(212, 175, 55, 0.1);
+
+    color: var(--gold-light);
+
+    font-size: 9px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+.promo-divider {
+    width: 100%;
+    height: 1px;
+
+    margin: 18px 0;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            rgba(212, 175, 55, 0.5),
+            transparent
+        );
+}
+
+
+/* ================= PROMO OFFERS ================= */
+
+.promo-offers {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+
+.promo-offer {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px;
+
+    border:
+        1px solid rgba(212, 175, 55, 0.18);
+
+    border-radius: 13px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    transition: 0.2s;
+}
+
+
+.promo-offer:hover {
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(212, 175, 55, 0.5);
+
+    background:
+        rgba(212, 175, 55, 0.05);
+}
+
+
+.offer-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background:
+        rgba(212, 175, 55, 0.08);
+
+    font-size: 18px;
+}
+
+
+.offer-text {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.offer-text span {
+    color: var(--gray);
+
+    font-size: 8px;
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+
+    line-height: 1.3;
+}
+
+
+.offer-text strong {
+    margin-top: 3px;
+
+    color: var(--gold-light);
+
+    font-size: 22px;
+}
+
+
+.offer-text .rebate-text {
+    font-size: 14px;
+
+    line-height: 1.3;
+}
+
+
+.promo-note {
+    margin-top: 15px;
+
+    padding-top: 12px;
+
+    border-top:
+        1px solid rgba(212, 175, 55, 0.12);
+
+    color: #777;
+
+    text-align: center;
+
+    font-size: 8px;
+
+    line-height: 1.5;
+}
+
+
+/* ================= SECTION ================= */
 
 .section {
     margin-top: 38px;
@@ -234,7 +511,7 @@ body {
 }
 
 
-/* GROUP CHANNEL */
+/* ================= GROUP CHANNEL ================= */
 
 .manager-grid {
     display: grid;
@@ -262,7 +539,8 @@ body {
 
     cursor: pointer;
 
-    border: 1px solid var(--border);
+    border:
+        1px solid var(--border);
 
     border-radius: 15px;
 
@@ -305,7 +583,8 @@ body {
 
     border-radius: 50%;
 
-    border: 1px solid var(--gold);
+    border:
+        1px solid var(--gold);
 
     background: #090909;
 
@@ -344,7 +623,8 @@ body {
 
     font-size: 20px;
 
-    transition: transform 0.2s;
+    transition:
+        transform 0.2s;
 }
 
 
@@ -354,7 +634,7 @@ body {
 }
 
 
-/* GAME GRID */
+/* ================= GAME LIST ================= */
 
 .game-grid {
     display: grid;
@@ -365,8 +645,6 @@ body {
     gap: 12px;
 }
 
-
-/* GAME CARD */
 
 .game-card {
     width: 100%;
@@ -379,7 +657,8 @@ body {
 
     text-align: left;
 
-    border: 1px solid var(--border);
+    border:
+        1px solid var(--border);
 
     border-radius: 16px;
 
@@ -412,8 +691,6 @@ body {
     transform: scale(0.98);
 }
 
-
-/* GAME IMAGE */
 
 .game-image {
     position: relative;
@@ -472,8 +749,6 @@ body {
 }
 
 
-/* GAME INFO */
-
 .game-info {
     padding: 12px;
 }
@@ -502,7 +777,7 @@ body {
 }
 
 
-/* MODAL */
+/* ================= MODAL ================= */
 
 .modal {
     position: fixed;
@@ -518,7 +793,8 @@ body {
     background:
         rgba(0, 0, 0, 0.85);
 
-    backdrop-filter: blur(5px);
+    backdrop-filter:
+        blur(5px);
 
     z-index: 1000;
 }
@@ -537,7 +813,8 @@ body {
 
     padding: 28px;
 
-    border: 1px solid var(--border);
+    border:
+        1px solid var(--border);
 
     border-radius: 20px;
 
@@ -572,8 +849,6 @@ body {
 }
 
 
-/* CLOSE */
-
 .close-button {
     position: absolute;
 
@@ -585,7 +860,8 @@ body {
 
     cursor: pointer;
 
-    border: 1px solid var(--border);
+    border:
+        1px solid var(--border);
 
     border-radius: 50%;
 
@@ -603,8 +879,6 @@ body {
     border-color: var(--gold);
 }
 
-
-/* MODAL BRAND */
 
 .modal-brand {
     display: flex;
@@ -624,7 +898,8 @@ body {
 
     overflow: hidden;
 
-    border: 1px solid var(--gold);
+    border:
+        1px solid var(--gold);
 
     border-radius: 50%;
 
@@ -679,8 +954,6 @@ body {
 }
 
 
-/* MODAL BUTTON */
-
 .modal-manager {
     width: 100%;
 
@@ -699,7 +972,8 @@ body {
 
     text-align: left;
 
-    border: 1px solid var(--border);
+    border:
+        1px solid var(--border);
 
     border-radius: 12px;
 
@@ -726,7 +1000,8 @@ body {
 
     flex-shrink: 0;
 
-    border: 1px solid var(--gold);
+    border:
+        1px solid var(--gold);
 
     border-radius: 50%;
 
@@ -760,7 +1035,7 @@ body {
 }
 
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer {
     padding: 38px 0 15px;
@@ -797,7 +1072,7 @@ footer > span {
 }
 
 
-/* TABLET */
+/* ================= TABLET ================= */
 
 @media (max-width: 750px) {
 
@@ -809,7 +1084,7 @@ footer > span {
 }
 
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
 @media (max-width: 600px) {
 
@@ -846,6 +1121,105 @@ footer > span {
     }
 
 
+    /* PROMOTION */
+
+    .promo-section {
+        margin-top: 16px;
+    }
+
+
+    .promo-banner {
+        padding: 16px;
+
+        border-radius: 15px;
+    }
+
+
+    .promo-icon {
+        width: 42px;
+        height: 42px;
+
+        border-radius: 11px;
+
+        font-size: 20px;
+    }
+
+
+    .promo-title span {
+        font-size: 7px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .promo-title h2 {
+        font-size: 16px;
+    }
+
+
+    .promo-badge {
+        padding: 5px 8px;
+
+        font-size: 7px;
+    }
+
+
+    .promo-divider {
+        margin: 14px 0;
+    }
+
+
+    .promo-offers {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 7px;
+    }
+
+
+    .promo-offer {
+        padding: 10px 8px;
+
+        gap: 7px;
+
+        border-radius: 11px;
+    }
+
+
+    .offer-icon {
+        width: 31px;
+        height: 31px;
+
+        font-size: 14px;
+    }
+
+
+    .offer-text span {
+        font-size: 7px;
+    }
+
+
+    .offer-text strong {
+        font-size: 18px;
+    }
+
+
+    .offer-text .rebate-text {
+        font-size: 11px;
+    }
+
+
+    .promo-note {
+        margin-top: 12px;
+
+        padding-top: 10px;
+
+        font-size: 7px;
+    }
+
+
+    /* SECTIONS */
+
     .section {
         margin-top: 28px;
     }
@@ -857,6 +1231,157 @@ footer > span {
 
 
     .section-heading p {
+        font-size: 10px;
+    }
+
+
+    /* GROUP CHANNEL */
+
+    .manager-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 8px;
+    }
+
+
+    .manager-card {
+        padding: 10px;
+
+        gap: 8px;
+
+        border-radius: 12px;
+    }
+
+
+    .manager-number {
+        width: 35px;
+        height: 35px;
+
+        font-size: 8px;
+    }
+
+
+    .manager-info strong {
+        font-size: 11px;
+    }
+
+
+    .manager-info span {
+        font-size: 9px;
+    }
+
+
+    .arrow {
+        font-size: 16px;
+    }
+
+
+    /* GAME LIST */
+
+    .game-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 9px;
+    }
+
+
+    .game-card {
+        border-radius: 13px;
+    }
+
+
+    .game-info {
+        padding: 10px;
+    }
+
+
+    .game-info h3 {
+        font-size: 12px;
+    }
+
+
+    .game-info p {
+        font-size: 8px;
+    }
+
+
+    /* MODAL */
+
+    .modal {
+        padding: 15px;
+    }
+
+
+    .modal-box {
+        padding: 23px;
+
+        border-radius: 17px;
+    }
+
+}
+
+
+/* ================= SMALL PHONE ================= */
+
+@media (max-width: 370px) {
+
+    .brand p {
+        font-size: 8px;
+    }
+
+
+    .manager-info span {
+        display: none;
+    }
+
+
+    .promo-title h2 {
+        font-size: 14px;
+    }
+
+
+    .promo-badge {
+        display: none;
+    }
+
+
+    .promo-offer {
+        padding: 8px 6px;
+
+        gap: 5px;
+    }
+
+
+    .offer-icon {
+        width: 27px;
+        height: 27px;
+
+        font-size: 12px;
+    }
+
+
+    .offer-text span {
+        font-size: 6px;
+    }
+
+
+    .offer-text strong {
+        font-size: 16px;
+    }
+
+
+    .offer-text .rebate-text {
+        font-size: 9px;
+    }
+
+
+    .game-info h3 {
+        font-size: 11px;
+    }
+
+             }ction-heading p {
         font-size: 10px;
     }
 
